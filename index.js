@@ -21,6 +21,13 @@ server.get('/home', (req, res) => {
     const accessToken = response.data.access_token;
     console.log('***Response data***', response.data);
 
+    axios({
+      url: 'https://api.github.com/user',
+      headers: {
+        Authorization: `token ${accessToken}`,
+      },
+    }).then(res => console.log('***GitHub User Object***', res.data));
+
     res.redirect(`/home.html?access_token=${accessToken}`);
   });
 });
