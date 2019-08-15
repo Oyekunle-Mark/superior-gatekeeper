@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 
 const server = express();
 
-const clientID = '788c40e178d18cdc6874';
-const clientSecret = '1b55fa79c10cd71fba117a120efd4ac946690fa4';
+const clientID = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 
 // the redirect route
 server.get('/home', (req, res) => {
@@ -18,7 +19,7 @@ server.get('/home', (req, res) => {
     },
   }).then(response => {
     const accessToken = response.data.access_token;
-    console.log(response.data);
+    console.log('***Response data***', response.data);
 
     res.redirect(`/home.html?access_token=${accessToken}`);
   });
