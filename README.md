@@ -10,6 +10,8 @@ The user object details is used to present the welcome message on the home.html 
 
 This app also uses the nodemailer library to send a mail to the user on successful authentication.
 
+Start the development server with `npm start`.
+
 ## Author
 
 Oyekunle Oloyede
