@@ -13,6 +13,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+/**
+ *
+ * @param {string} receiverMail
+ */
 module.exports = receiverMail => {
   const mailOptions = {
     from: 'admin@where-to-code.com',
