@@ -14,8 +14,8 @@ const transporter = nodemailer.createTransport({
 });
 
 /**
- *
- * @param {string} receiverMail
+ * Calls the sendMail method on the transporter
+ * @param {string} receiverMail The receiver's mail
  */
 module.exports = receiverMail => {
   const mailOptions = {
