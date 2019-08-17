@@ -12,6 +12,8 @@
   },
   "keywords": [
     "oauth2.0",
+    "github auth",
+    "node mailer",
     "node",
     "auth",
     "login"
