@@ -1,11 +1,15 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
+
+const user = process.env.TRANSPORTER_USER;
+const pass = process.env.TRANSPORTER_PASS;
 
 // turn on less secure app on the google settings before running this block
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'oyekunlemac@gmail.com',
-    pass: 'oyekunle1990',
+    user,
+    pass,
   },
 });
 
