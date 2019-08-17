@@ -8,6 +8,8 @@ On successful the github auth redirects to /home with logs both response object 
 
 The user object details is used to present the welcome message on the home.html file.
 
+This app also uses the nodemailer library to send a mail to the user on successful authentication.
+
 ## Author
 
 Oyekunle Oloyede
