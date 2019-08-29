@@ -39,6 +39,6 @@ server.get('/home', (req, res) => {
 
 server.use(express.static(__dirname + '/public'));
 
-server.listen(5000, () => {
-  console.log('Server listening on port : 5000');
+server.listen(3000, () => {
+  console.log('Server listening on port : 3000');
 });
