@@ -30,7 +30,7 @@ server.get('/home', (req, res) => {
     }).then(res => {
       console.log('***GitHub User Object***', res.data, '\n');
 
-      mailer(res.data.email);
+      // mailer(res.data.email);
     });
 
     res.redirect(`/home.html?access_token=${accessToken}`);
@@ -39,6 +39,6 @@ server.get('/home', (req, res) => {
 
 server.use(express.static(__dirname + '/public'));
 
-server.listen(3000, () => {
-  console.log('Server listening on port : 3000');
+server.listen(1234, () => {
+  console.log('Server listening on port : 1234');
 });
